@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "382676276089",
+    "firebase_url": "https://delivery-inteligente-default-rtdb.firebaseio.com",
+    "project_id": "delivery-inteligente",
+    "storage_bucket": "delivery-inteligente.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382676276089:android:a6ae9979dc849c76fad5a8",
+        "android_client_info": {
+          "package_name": "com.mattinen.driversapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382676276089-qmfr276la1ianpp3b5bnuat33q7ck48r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbU3DeYjNLoVloP9pZdheCNlOi-JHfKyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382676276089-qmfr276la1ianpp3b5bnuat33q7ck48r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
