@@ -166,7 +166,7 @@ class _HomeTabPageState extends State<HomeTabPage>
                     });
 
                     //display Toast
-                    Fluttertoast.showToast(msg: "you are Online Now");
+                    Fluttertoast.showToast(msg: "Estas en linea ahora");
                   }
                   else //online
                   {
@@ -179,7 +179,7 @@ class _HomeTabPageState extends State<HomeTabPage>
                     });
 
                     //display Toast
-                    Fluttertoast.showToast(msg: "you are Offline Now");
+                    Fluttertoast.showToast(msg: "Estas desconectado ahora");
                   }
                 },
                 style: ElevatedButton.styleFrom(
