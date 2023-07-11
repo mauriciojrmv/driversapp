@@ -56,7 +56,7 @@ class _NotificationDialogBoxState extends State<NotificationDialogBox>
 
             //title
             const Text(
-              "New Ride Request",
+              "Nuevo pedido de delivery",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 22,
@@ -179,7 +179,7 @@ class _NotificationDialogBoxState extends State<NotificationDialogBox>
                       });
                     },
                     child: Text(
-                      "Cancel".toUpperCase(),
+                      "Cancelar".toUpperCase(),
                       style: const TextStyle(
                         fontSize: 14.0,
                       ),
@@ -202,7 +202,7 @@ class _NotificationDialogBoxState extends State<NotificationDialogBox>
                       acceptRideRequest(context);
                     },
                     child: Text(
-                      "Accept".toUpperCase(),
+                      "Aceptar".toUpperCase(),
                       style: const TextStyle(
                         fontSize: 14.0,
                       ),
