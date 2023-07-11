@@ -123,7 +123,7 @@ class _FareAmountCollectionDialogState extends State<FareAmountCollectionDialog>
             const SizedBox(height: 10,),
             ElevatedButton(
               onPressed: () async {
-                final image = await ImagePicker().pickImage(source: ImageSource.camera);
+                final image = await ImagePicker().pickImage(source: ImageSource.gallery);
                 if (image != null) {
                   setState(() {
                     _selectedImage = File(image.path);
