@@ -47,7 +47,7 @@ class _FareAmountCollectionDialogState extends State<FareAmountCollectionDialog>
   void confirmPhoto(BuildContext context) {
     FirebaseDatabase.instance
         .ref()
-        .child("All Ride Requests")
+        .child("drivers")
         .child(currentFirebaseUser!.uid)
         .child("photoMatch")
         .once()
@@ -58,7 +58,9 @@ class _FareAmountCollectionDialogState extends State<FareAmountCollectionDialog>
         Fluttertoast.showToast(msg: "Aun no esta confirmada la foto");
       } else {
         Fluttertoast.showToast(msg: "Se confirmo la foto");
-        Future.delayed(const Duration(milliseconds: 5000), () {
+        print(photoMatch);
+        Future.delayed(const Duration(milliseconds: 5000), ()
+        {
           SystemNavigator.pop();
         });
       }
@@ -167,40 +169,56 @@ class _FareAmountCollectionDialogState extends State<FareAmountCollectionDialog>
             ),
 
             const SizedBox(height: 10,),
+
             Padding(
               padding: const EdgeInsets.all(18.0),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
-                ),
-                onPressed: ()
-                {
-                    confirmPhoto(context);
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      "Cobrar",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+              child: Column(
+                children: [
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.green,
                     ),
-                    Text(
-                      "Bs  " + widget.totalFareAmount!.toString(),
-                      style: const TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    onPressed: () {
+                      confirmPhoto(context);
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
+                          "Cobrar",
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "Bs  " + widget.totalFareAmount!.toString(),
+                          style: const TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Fluttertoast.showToast(msg: "Aun no esta confirmada la foto");
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      height: 5,
+                      color: Colors.grey,
+                      margin: const EdgeInsets.symmetric(vertical: 8.0),
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 4,),
+
+
           ],
         ),
       ),
